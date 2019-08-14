@@ -17,7 +17,7 @@ export class AppComponent {
   appRaceConfig : IAppRaceConfig;
 
   raceLapsColumns: string[] = [];
-  displayedColumns: string[] = ['endPositionRace', 'driverId', 'driverName', 'raceSpeedAverage', 'raceDurationTimeLater', 'raceDurationTime'];
+  displayedColumns: string[] = ['endPositionRace', 'driverId', 'driverName', 'raceSpeedAverage', 'raceDurationTimeLater', 'raceDurationTime', 'qtyRaceLapCompleted'];
   dataSourceRace : MatTableDataSource<IRaceDriver>;
 
   constructor(
@@ -93,5 +93,10 @@ export class AppComponent {
   getRaceSpeedAverage(raceSpeedAverage : number) : string {
 
     return  numeral(raceSpeedAverage).format('#.00');
+  }
+
+  getQtyRaceLapCompleted(raceDriver : IRaceDriver) : number {
+
+    return  raceDriver.raceLaps.length;
   }
 }
