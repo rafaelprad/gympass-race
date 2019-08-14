@@ -1,3 +1,14 @@
+SOLUTION
+========
+
+All solution was created using Angular framework to create a visual mode for the user.
+
+```
+
+Requirements
+------------------
+* If you are will to try run this code, will be necessary to install all dependencys, run "npm i" and to run the application will be necessary to install "Angular globally". After that all dependencys is installed, it's perfect to execute "ng serve" and to connect on your browser on "http://localhost:4200".
+
 # GympassRace
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.

@@ -1,21 +1,77 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div fxLayout="row" fxLayoutAlign="center center">
+  <div fxLayout="column" fxFlex="20%">
+    <img width="50" height="50" alt="Gympass Logo" src="data:image/png;base64,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">
+  </div>
+  <div fxLayout="column" fxFlex="80%">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+<div fxLayout="row" fxLayoutAlign="center">
+  <div fxLayout="column" fxFlex="100%">
+    <table mat-table [dataSource]="dataSourceRace" class="mat-elevation-z8">
+      <!-- End Position Race Column -->
+      <ng-container matColumnDef="endPositionRace">
+        <th mat-header-cell *matHeaderCellDef> End Position </th>
+        <td mat-cell *matCellDef="let raceDriver"> {{raceDriver.endPositionRace}} </td>
+      </ng-container>
+      <!-- Driver Id Column -->
+      <ng-container matColumnDef="driverId">
+        <th mat-header-cell *matHeaderCellDef> Driver Id </th>
+        <td mat-cell *matCellDef="let raceDriver"> {{raceDriver.id}} </td>
+      </ng-container>
+    
+      <!-- Driver Name Column -->
+      <ng-container matColumnDef="driverName">
+        <th mat-header-cell *matHeaderCellDef> Driver Name </th>
+        <td mat-cell *matCellDef="let raceDriver"> {{raceDriver.name}} </td>
+      </ng-container>
+
+      <!-- Race Laps -->
+
+      <!-- Race Speed Average Column -->
+      <ng-container matColumnDef="raceSpeedAverage">
+        <th mat-header-cell *matHeaderCellDef> Race Speed Average </th>
+        <td mat-cell *matCellDef="let raceDriver"> {{ getRaceSpeedAverage(raceDriver.speedAverage) }} </td>
+      </ng-container>
+    
+      <!-- Race Duration Late Column -->
+      <ng-container matColumnDef="raceDurationTimeLater">
+        <th mat-header-cell *matHeaderCellDef> Race Duration Late </th>
+        <td mat-cell *matCellDef="let raceDriver"> {{ getTextDurationTime(raceDriver.raceDurationTimeLater)}} </td>
+      </ng-container>
+    
+      <!-- Race Duration Column -->
+      <ng-container matColumnDef="raceDurationTime">
+        <th mat-header-cell *matHeaderCellDef> Race Duration </th>
+        <td mat-cell *matCellDef="let raceDriver"> {{ getTextDurationTime( raceDriver.raceDurationTime) }} </td>
+      </ng-container>
+
+      <ng-container *ngFor="let columnRaceLap of getColumnsRaceLaps()" [matColumnDef]="columnRaceLap">
+        <th mat-header-cell *matHeaderCellDef> {{ getDataRaceLapDescription(columnRaceLap) }} </th>
+        <td mat-cell #cellElementRef *matCellDef="let raceDriver">
+          {{ getDataRaceLap(raceDriver, columnRaceLap, appRaceConfig) }}
+          </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>
+<div fxLayout="row" fxLayoutAlign="center center">
+  <div fxLayout="column" fxFlex="80%">
+    <h3>
+      (*) Best race lap of driver
+    </h3>
+  </div>
+  <div fxLayout="column" fxFlex="80%">
+    <h3>
+      (**) Best race lap of race
+    </h3>
+  </div>
+</div>
+  
 <router-outlet></router-outlet>
